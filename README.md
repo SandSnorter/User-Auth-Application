@@ -1,6 +1,6 @@
 # UserAuthApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+A user authentication application made using angular.js with local storage.
 
 ## Development server
 
