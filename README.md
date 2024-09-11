@@ -27,6 +27,10 @@ Welcome to the User Auth App! This Angular web application is designed for user 
 
 ## Screenshots
 
+![Screenshot (285)](https://github.com/user-attachments/assets/61885ef2-f56a-4889-bcdc-528f7283672d)
+![Screenshot (286)](https://github.com/user-attachments/assets/890519b5-72d3-4b6f-bcbb-6be89506aad5)
+![Screenshot (284)](https://github.com/user-attachments/assets/c1ecde07-4711-4924-949b-a2efceab639e)
+![Screenshot (304)](https://github.com/user-attachments/assets/be6c814d-5f6a-4e05-9941-506097d3114d)
 
 ## Getting Started
 
