@@ -25,14 +25,6 @@ Welcome to the User Auth App! This Angular web application is designed for user 
 - **NgRx**: State management for Angular applications.  
 - **Bootstrap**: For styling and responsive design.  
 
-## Setup Instructions  
-
-1. **Clone the repository**:  
-   ```bash  
-   git clone https://github.com/SandSnorter/User-Auth-Application.git  
-   cd user-auth-application
-   ```
-
 ## Screenshots
 
 
@@ -44,13 +36,12 @@ To run this project locally, follow these steps:
 
 ```bash
    git clone https://github.com/yourusername/user-auth-app.git  
-   cd user-auth-app
 ```
 
 Navigate to the project directory:
 
 ```bash
-  cd USer-Auth-App
+  cd User-Auth-Application
 ```
 
 Install the dependencies:
