@@ -1,0 +1,46 @@
+<div class="parent">  
+    <div class="container" id="container">  
+        <div class="illus">  
+            <div id="img1">  
+                <img src="assets/images/logo.png"> 
+                <img src="assets/images/logo1.png" id="img3">  
+            </div>  
+            <div id="img2">  
+                <img src="assets/images/illus.png">   
+            </div>  
+        </div>   
+        <div class="form-container welcome">  
+            <form (submit)="onWelcome($event)">  
+                <h5>Welcome</h5>  
+                <div class="label">  
+                    <label for="email">Enter Email ID</label>  
+                    <input type="email"   
+                           id="email"   
+                           name="email"   
+                           placeholder="Loremipsum@gmail.com"   
+                           [(ngModel)]="welcomeObj.email"   
+                           [ngModelOptions]="{ standalone: true }"   
+                           [ngClass]="{'border-red-500': errorMessages.email}">  
+                    <div *ngIf="errorMessages.email" class="error-message">{{ errorMessages.email }}</div>  
+                </div>  
+
+                <p>(OR)</p>  
+
+                <div class="label">  
+                    <label for="phone">Enter Mobile No.</label>  
+                    <input type="tel"   
+                           id="phone"   
+                           name="phone"   
+                           placeholder="+91"   
+                           pattern="[0-9]{10}"   
+                           [(ngModel)]="welcomeObj.phone"   
+                           [ngModelOptions]="{ standalone: true }"   
+                           [ngClass]="{'border-red-500': errorMessages.phone}">  
+                    <div *ngIf="errorMessages.phone" class="error-message">{{ errorMessages.phone }}</div>  
+                </div>  
+                
+                <button type="submit">Next</button>  
+            </form>  
+        </div>  
+    </div>  
+</div>

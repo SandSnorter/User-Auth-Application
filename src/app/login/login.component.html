@@ -1,0 +1,42 @@
+<div class="parent">  
+    <div class="container" id="container">  
+        <div class="illus">  
+            <div id="img1">  
+                <img src="assets/images/logo.png"> 
+                <img src="assets/images/logo1.png" id="img3">  
+            </div>  
+            <div id="img2">  
+                <img src="assets/images/illus.png">   
+            </div>  
+        </div>   
+        <div class="form-container login">  
+            <form (submit)="onLogin($event)">
+                <h5>Welcome Back, {{ userName }}!</h5>
+                
+                <div class="label">  
+                    <label for="email">Enter Email ID</label>  
+                    <input type="email" id="email"   
+                           [(ngModel)]="loginObj.email"   
+                           name="email"   
+                           [ngModelOptions]="{ standalone: true }"  
+                           [ngClass]="{'border-red-500': errorMessages.email}"   
+                           placeholder="Loremipsum@gmail.com" required>  
+                    <div *ngIf="errorMessages.email" class="error-message">{{ errorMessages.email }}</div> 
+                </div>  
+
+                <div class="label">  
+                    <label for="password">Enter Password</label>  
+                    <input type="password" id="password"   
+                           [(ngModel)]="loginObj.password"   
+                           name="password"   
+                           [ngModelOptions]="{ standalone: true }"   
+                           [ngClass]="{'border-red-500': errorMessages.password}"   
+                           placeholder="Password" required minlength="8">  
+                    <div *ngIf="errorMessages.password" class="error-message">{{ errorMessages.password }}</div> <!-- Display error message for password -->  
+                </div>  
+                
+                <button type="submit">Next</button>
+            </form>  
+        </div>  
+    </div>  
+</div>

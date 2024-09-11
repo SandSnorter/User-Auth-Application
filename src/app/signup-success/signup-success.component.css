@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+ 
+.parent{
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    flex-direction: column;
+    height: 100vh;
+    padding: 60px 40px;
+}
+
+.illus{
+    background-color: rgb(191, 207, 222);
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    overflow: hidden;
+    max-width: fit-content;
+    min-height: 480px;
+}
+
+.icon-container{
+    top: 0;
+    height: 100%;
+    flex: 1;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    flex-direction: column;  
+    margin: 0 70px;
+} 
+
+.done{
+    left: 0;
+    width: 50%;
+    z-index: 1;
+} 
+
+.tick-icon {  
+    animation: scale-up 0.5s forwards;  
+    position: relative; 
+    margin-bottom: 4lvh;
+}  
+
+.tick-circle {  
+    fill: #89f68c;  
+    stroke: #89f68c;   
+    stroke-width: 2;  
+    stroke-linecap: round;  
+} 
+
+.tick-sign {  
+    fill: none;  
+    stroke: white;  
+    stroke-width: 1;  
+    stroke-dasharray: 100;  
+    stroke-dashoffset: 100; 
+    animation: draw 0.5s forwards 0.5s;  
+}  
+
+@keyframes scale-up {  
+    from {  
+        transform: scale(0);  
+    }  
+    to {  
+        transform: scale(1);  
+    }  
+}  
+
+@keyframes draw {  
+    to {  
+        stroke-dashoffset: 0;  
+    }  
+}  
+
+h4 {
+    font-weight: bold;
+    margin-bottom: 2lvh;
+}
+
+
+#img1{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#img3{
+    margin-left: 5px;
+}
+
+#img2{
+    margin-right: 20px;
+}

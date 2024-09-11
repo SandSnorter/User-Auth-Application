@@ -1,0 +1,108 @@
+<div class="parent">  
+    <div class="container" id="container">  
+        <div class="illus">  
+            <div id="img1">  
+                <img src="assets/images/logo.png"> 
+                <img src="assets/images/logo1.png" id="img3">  
+            </div>  
+            <div id="img2">  
+                <img src="assets/images/illus.png">   
+            </div>   
+        </div> 
+        <div class="form-container sign-up">  
+            <h5>Create Account</h5>  
+            <div class="progress-bar">  
+                <div [style.width]="currentPage === 1 ? '50%' : '100%'" class="progress"></div>  
+            </div>  
+            
+            <form *ngIf="currentPage === 1" (ngSubmit)="nextPage()">  
+                <div class="label">  
+                    <label for="email">Enter Email ID</label>  
+                    <input type="email" id="email" name="email" [(ngModel)]="signUpObj.email"   
+                        [ngModelOptions]="{ standalone: true }"   
+                        [ngClass]="{'border-red-500': errorMessages.email}"   
+                        placeholder="Loremipsum@gmail.com" required>  
+                    <div *ngIf="errorMessages.email" class="error-message">{{ errorMessages.email }}</div>  
+                </div>  
+            
+                <div class="label">  
+                    <label for="name">Enter Full Name</label>  
+                    <input type="text" id="name" [(ngModel)]="signUpObj.name"   
+                        [ngModelOptions]="{ standalone: true }"   
+                        [ngClass]="{'border-red-500': errorMessages.name}"   
+                        placeholder="Your Name" required>  
+                    <div *ngIf="errorMessages.name" class="error-message">{{ errorMessages.name }}</div>  
+                </div>  
+    
+                <div class="label">  
+                    <label for="password">Create Password</label>  
+                    <input type="password" id="password" [(ngModel)]="signUpObj.password"   
+                        [ngModelOptions]="{ standalone: true }"   
+                        placeholder="Your Password" required>  
+                    <div *ngIf="errorMessages.password" class="error-message">{{ errorMessages.password }}</div>  
+                </div>  
+        
+                <button type="button" (click)="nextPage()">Next</button>  
+            </form>  
+    
+            <form *ngIf="currentPage === 2" (ngSubmit)="onRegister()"> 
+                
+                <div class="label">  
+                    <label for="organname">Organisation-name</label>  
+                    <input type="text" id="organname" [(ngModel)]="signUpObj.organisationName"   
+                        [ngModelOptions]="{ standalone: true }"   
+                        [ngClass]="{'border-red-500': errorMessages.organisationName}"   
+                        placeholder="Full Name">  
+                    <div *ngIf="errorMessages.organisationName" class="error-message">{{ errorMessages.organisationName }}</div>  
+                </div>  
+
+                <div class="label">  
+                    <label for="organId">Organisation-id</label>  
+                    <input type="text" id="organId" [(ngModel)]="signUpObj.organisationId"   
+                        [ngModelOptions]="{ standalone: true }"   
+                        [ngClass]="{'border-red-500': errorMessages.organisationId}"   
+                        placeholder="Loremipsum@gmail.com">  
+                    <div *ngIf="errorMessages.organisationId" class="error-message">{{ errorMessages.organisationId }}</div>  
+                </div>   
+
+                <div class="label">  
+                    <label for="designation">Designation</label>  
+                    <input type="text" id="designation" [(ngModel)]="signUpObj.designation"   
+                        [ngModelOptions]="{ standalone: true }"   
+                        [ngClass]="{'border-red-500': errorMessages.designation}"   
+                        placeholder="Manager">  
+                    <div *ngIf="errorMessages.designation" class="error-message">{{ errorMessages.designation }}</div>  
+                </div>  
+            
+                <div class="label">  
+                    <label for="birthdate">Birth-date</label>  
+                    <input type="date" id="birthdate" [(ngModel)]="signUpObj.dateOfBirth"   
+                        [ngModelOptions]="{ standalone: true }"   
+                        [ngClass]="{'border-red-500': errorMessages.dateOfBirth}">  
+                    <div *ngIf="errorMessages.dateOfBirth" class="error-message">{{ errorMessages.dateOfBirth }}</div>  
+                </div>  
+        
+                <div class="flex">  
+                    <div style="margin-right: 20px;">  
+                        <label for="city">City</label>  
+                        <input type="text" id="city" [(ngModel)]="signUpObj.city"   
+                                [ngModelOptions]="{ standalone: true }"   
+                                [ngClass]="{'border-red-500': errorMessages.city}"   
+                                placeholder="City" required>  
+                        <div *ngIf="errorMessages.city" class="error-message">{{ errorMessages.city }}</div>  
+                    </div>  
+                    <div>  
+                        <label for="pincode">Pincode</label>  
+                        <input type="text" id="pincode" [(ngModel)]="signUpObj.pincode"   
+                                [ngModelOptions]="{ standalone: true }"   
+                                [ngClass]="{'border-red-500': errorMessages.pincode}"   
+                                placeholder="Pincode" required>  
+                        <div *ngIf="errorMessages.pincode" class="error-message">{{ errorMessages.pincode }}</div>  
+                    </div>  
+                </div>  
+                
+                <button type="submit">Create Account</button>  
+            </form>  
+        </div>  
+    </div>  
+  </div>
