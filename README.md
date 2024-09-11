@@ -29,8 +29,8 @@ Welcome to the User Auth App! This Angular web application is designed for user 
 
 1. **Clone the repository**:  
    ```bash  
-   git clone https://github.com/yourusername/user-auth-app.git  
-   cd user-auth-app
+   git clone https://github.com/SandSnorter/User-Auth-Application.git  
+   cd user-auth-application
    ```
 
 ## Screenshots
